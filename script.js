@@ -1,6 +1,5 @@
-const win = `You win`
-const lose = `You lose`
-const draw = "It's a draw!"
+
+
 
 let playerScore = 0
 let computerScore = 0
@@ -21,8 +20,13 @@ for (i = 0; i < 5; i++) {
     computerSelection = computerSelection.toLowerCase();
     playerSelection = prompt("Choose: ", 'Rock, Paper or Scissors')
     
+    const win = `You win, ${playerSelection} beats ${computerSelection}`
+    const lose = `You lose, ${computerSelection} beats ${playerSelection}`
+    const draw = "It's a draw!"
+
     function singleRound(playerSelection,computerSelection){
-    
+        
+
         playerSelection = playerSelection.toLowerCase();
     
         if (playerSelection === 'rock' || playerSelection === 'paper' || playerSelection === 'scissors') {
