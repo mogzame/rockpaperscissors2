@@ -54,14 +54,11 @@ for (i = 0; i < 5; i++) {
 let result = playerScore - computerScore
 
 if (result > 0) {
-    alert("HUMAN WINS!")
+    alert(`HUMAN WINS ${playerScore} to ${computerScore}`)
 }
 
 else if (result < 0) {
-    alert("MACHINE BEATS HUMAN!")
+    alert(`MACHINE BEATS HUMAN ${computerScore} to ${playerScore}`)
 }
 
 else alert("IT'S A DRAW!")
-
-console.log(playerScore)
-console.log(computerScore)
