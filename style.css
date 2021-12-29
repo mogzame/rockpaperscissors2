@@ -11,11 +11,10 @@ body {
 }
 header {
     display: flex;
-    background-color: rgb(238, 227, 183);
+    background-color: rgb(232, 222, 186);
     height: 100px;
     align-items: center;
     justify-content: center;
-    
     font-weight: 700;
     font-size: 40px;
     color: rgb(72, 66, 67);
@@ -77,16 +76,19 @@ header {
     font-size: 50px;
     width: 450px;
     text-align: center;
-    
-    padding-bottom: 20px;
+    color: rgb(243, 240, 228);
+    padding-bottom: 15px;
 }
+
 
 .result.resultStyle {
     border-bottom: blanchedalmond 3px solid;
+    color: rgb(232, 222, 186);
 }
 
 .yes,.no {
     cursor: pointer;
+    color: rgb(225, 221, 205);
 }
 
 .yes:hover, .no:hover {
@@ -101,14 +103,6 @@ header {
     font-size: 40px;
 }
 
-.won {
-background-color: rgb(27, 114, 27);
-}
-
-.lost {
-background-color: rgb(187, 36, 36);
-}
-
-.draw {
-background-color: rgb(130, 128, 128);
+.question {
+    font-size: 40px;
 }
