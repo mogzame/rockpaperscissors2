@@ -9,6 +9,7 @@ const result = document.querySelector('.result')
 const leaderboard = document.getElementsByClassName('leaderboard')
 const body = document.getElementById('bod')
 const choice = document.querySelector('.choice')
+
 function computerPlay() {
     const rand = Math.floor(Math.random() * 3)
     if (rand === 0) return "Rock";
@@ -23,9 +24,10 @@ function replay(){
 
     const question = document.createElement('div')
     body.appendChild(question)
-
+    question.classList.add('question')
     question.textContent = 'Do you wanna play again?'
     question.style.textAlign = 'center'
+
 
     const answer = document.createElement('div')
     answer.classList.add('answer')
@@ -60,21 +62,24 @@ function endGame(winner) {
     
 }
 
-function win(){
+function win(playerSelection, computerSelection){
     playerScore++;
+    result.textContent = `You win, ${playerSelection} beats ${computerSelection}`;
     playerScore_span.textContent = playerScore;
     if (playerScore === 5) {
         endGame('Human')
     }
 }
 
-function lose(){
+function lose(playerSelection, computerSelection){
     computerScore++;
+    result.textContent = `You lose, ${computerSelection} beats ${playerSelection}`;
     computerScore_span.textContent = computerScore;
     if (computerScore === 5) {endGame('Computer')}
 }
 
 function draw(){
+    result.textContent = "Draw"
 }
 
 function singleRound(playerSelection) {
@@ -82,10 +87,10 @@ function singleRound(playerSelection) {
     console.log("Player's choice is: " + playerSelection)
     console.log("Computer's choice is: " + computerSelection)
 
-    if (playerSelection === computerSelection) return draw()
+    if (playerSelection === computerSelection) return draw(playerSelection, computerSelection)
     else if (computerSelection === 'Paper' && playerSelection === 'Rock' || computerSelection === 'Rock' && playerSelection === 'Scissors' || 
-    computerSelection === 'Scissors' && playerSelection === 'Paper') return lose()
-    else return win()
+    computerSelection === 'Scissors' && playerSelection === 'Paper') return lose(playerSelection, computerSelection)
+    else return win(playerSelection, computerSelection)
 }
 
 function game() {
