@@ -5,8 +5,41 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
+
+
 <body>
+<header>ROCK PAPER SCISSORS</header>
+<div id="bod">
+<div class="ques">Make a choice:</div> 
+<div class="choices">
+    <button class="choice" id="r">
+        <img src="images/rock.png"></button>
+    </button>
+    <button class="choice" id="p">
+        <img src="images/paper.png"></button>
+    </button>
+    <button class="choice" id="s">
+        <img src="images/scissors.png"></button>
+    </button>
+</div>
+
+<div class="leaderboard">
+    <div class="user">human</div>
+    <span id="player-score">0</span> : <span id="computer-score">0</span>
+    <div class="computer">computer</div>
+</div>
+    <div class="result"></div>
+    <!-- <div class='question'>Do you want to play again?</div>
+    <div class="answer">
+    <div class="yes">YES</div><div class="no">NO</div>
+    </div>
+</div> -->
+    
     <script src="script.js"></script>
 </body>
 </html>

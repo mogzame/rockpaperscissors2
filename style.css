@@ -1,0 +1,114 @@
+* {
+    margin: 0;
+    box-sizing: content-box;
+    font-family: 'Righteous', cursive;
+    
+}
+
+
+body {
+    background-color: rgb(34, 90, 111);
+}
+header {
+    display: flex;
+    background-color: rgb(238, 227, 183);
+    height: 100px;
+    align-items: center;
+    justify-content: center;
+    
+    font-weight: 700;
+    font-size: 40px;
+    color: rgb(72, 66, 67);
+}
+
+#bod {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    font-size: 30px;
+    gap: 20px;
+    color: rgba(255, 255, 255, 0.885);
+    -webkit-text-stroke-width: 1px;
+    -webkit-text-stroke-color: rgb(100, 94, 94);
+    border-top: rgba(133, 182, 157, 0.179) 7px solid;
+    
+}
+
+.ques {
+    font-size: 40px;
+    margin-top: 20px;
+}
+
+.choice {
+    background: none;
+    border: rgb(216, 209, 209) 5px solid;
+    margin: 15px;
+    padding: 15px;
+    background-color: rgba(238, 228, 175, 0.165);
+}
+
+.choice:hover {
+    background-color: rgba(175, 238, 238, 0.268);
+    cursor: pointer;
+}
+
+.leaderboard {
+    display: flex;
+    border: rgb(201, 189, 189) 5px solid;
+    font-size: 70px;
+    padding: 30px;
+    width: 300px;
+    justify-content: center;
+    padding-left: 50px;
+    background-color: rgba(19, 198, 211, 0.357);
+}
+
+.user {
+    display: inline-flex;
+    font-size: 20px;
+}
+.computer {
+    display: inline-flex;
+    font-size: 20px;
+}
+
+.result {
+    font-size: 50px;
+    width: 450px;
+    text-align: center;
+    
+    padding-bottom: 20px;
+}
+
+.result.resultStyle {
+    border-bottom: blanchedalmond 3px solid;
+}
+
+.yes,.no {
+    cursor: pointer;
+}
+
+.yes:hover, .no:hover {
+    color: rgb(225, 113, 109);
+}
+
+.answer {
+    display: flex;
+    padding: 20px;
+    width: 230px;
+    justify-content: space-between ;
+    font-size: 40px;
+}
+
+.won {
+background-color: rgb(27, 114, 27);
+}
+
+.lost {
+background-color: rgb(187, 36, 36);
+}
+
+.draw {
+background-color: rgb(130, 128, 128);
+}
